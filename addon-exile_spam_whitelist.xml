@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="exile_spam_whitelist" title="[Exile] Белый список антиспама" version_string="1.0.0" version_id="100" url="https://xenforo.info/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="load_class_model" execute_order="10" callback_class="Exile_SpamWhitelist_Listener" callback_method="load_class" active="1" hint="" description="Extend spam prevention model"/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups>
+    <option option_id="spamWhitePhrases" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params>rows=2</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="spam" display_order="125"/>
+    </option>
+  </optiongroups>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="option_spamWhitePhrases" version_id="100" version_string="1.0.0"><![CDATA[Белый список спам-фраз]]></phrase>
+    <phrase title="option_spamWhitePhrases_explain" version_id="100" version_string="1.0.0"><![CDATA[Если любая из этих фраз встретится в сообщении, то сообщение автоматически будет одобрено, не смотря на расположенную выше настройку. Вводите по одной фразе на строку. Можно использовать символ * в качестве маски. Если строка начинается с символа /, то она будет рассматриваться как регулярное выражение (например: /test/i).]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates/>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
